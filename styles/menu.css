@@ -1,0 +1,489 @@
+:root {
+  --espresso: #2B1B12;
+  --coffee: #4A2E1E;
+  --coffee-light: #7A5A42;
+  --cream: #F7F1E8;
+  --card: #FFFFFF;
+  --gold: #B0803F;
+  --gold-dark: #8C6530;
+  --border: #E5DAC9;
+  --text: #2B211A;
+  --text-muted: #766558;
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --shadow-sm: 0 2px 10px rgba(43, 27, 18, 0.06);
+  --shadow-md: 0 14px 28px rgba(43, 27, 18, 0.14);
+  --radius: 16px;
+  --transition: 0.25s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--text);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+/* Navbar */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  background-color: var(--card);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .logo img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+nav .menu ul {
+  display: flex;
+  gap: 36px;
+}
+
+nav .menu ul li a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  transition: color var(--transition);
+  position: relative;
+}
+
+nav .menu ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background-color: var(--gold);
+  transition: width var(--transition);
+}
+
+nav .menu ul li a:hover {
+  color: var(--gold-dark);
+}
+
+nav .menu ul li a:hover::after {
+  width: 100%;
+}
+
+nav .authBtn {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.btn-outline {
+  color: var(--espresso);
+  background-color: transparent;
+  border: 2px solid var(--espresso);
+}
+
+.btn-outline:hover {
+  background-color: var(--espresso);
+  color: #fff;
+}
+
+.btn-solid {
+  color: #fff;
+  background-color: var(--espresso);
+  border: 2px solid var(--espresso);
+}
+
+.btn-solid:hover {
+  background-color: var(--coffee-light);
+  border-color: var(--coffee-light);
+}
+
+/* Banner */
+
+header #banner {
+  background-image: url("../menu-photo/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 340px;
+  position: relative;
+}
+
+header #banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(43, 27, 18, 0.15), rgba(43, 27, 18, 0.4));
+}
+
+img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.line {
+  border-bottom: 1px solid var(--border);
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Meal Time Navigation */
+
+#meal-time {
+  padding: 40px 0 24px;
+}
+
+#meal-time ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+#meal-time ul li {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  padding: 10px 28px;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+}
+
+#meal-time ul li:hover,
+#meal-time ul li.active {
+  background-color: var(--espresso);
+  border-color: var(--espresso);
+  color: #fff;
+}
+
+/* Breakfast, Lunch, Drinks, Dessert Sections */
+
+#breakfast,
+#launch,
+#drink,
+#dessert,
+#reserve-Table {
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+
+#breakfast h2,
+#launch h2,
+#drink h2,
+#dessert h2 {
+  margin: 26px 0;
+  font-size: 1.9rem;
+  color: var(--espresso);
+  position: relative;
+  padding-left: 18px;
+}
+
+#breakfast h2::before,
+#launch h2::before,
+#drink h2::before,
+#dessert h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 26px;
+  background-color: var(--gold);
+  border-radius: 4px;
+}
+
+.breakfast-cards,
+.launch-cards,
+.drink-cards,
+.dessert-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.breakfast-card,
+.launch-card,
+.drink-card,
+.dessert-card {
+  background-color: var(--card);
+  padding: 16px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.breakfast-card:hover,
+.launch-card:hover,
+.drink-card:hover,
+.dessert-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+
+.breakfast-card img,
+.launch-card img,
+.drink-card img,
+.dessert-card img {
+  border-radius: 10px;
+  height: 180px;
+}
+
+.breakfast-card .name-price,
+.launch-card .name-price,
+.drink-card .name-price,
+.dessert-card .name-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.breakfast-card .name-price h2,
+.launch-card .name-price h2,
+.drink-card .name-price h2,
+.dessert-card .name-price h2 {
+  font-size: 1.15rem;
+  color: var(--espresso);
+}
+
+.breakfast-card .name-price h4,
+.launch-card .name-price h4,
+.drink-card .name-price h4,
+.dessert-card .name-price h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gold-dark);
+}
+
+.breakfast-card p,
+.launch-card p,
+.drink-card p,
+.dessert-card p {
+  margin-top: 8px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  flex-grow: 1;
+}
+
+.breakfast-card button,
+.launch-card button,
+.drink-card button,
+.dessert-card button {
+  margin-top: 14px;
+  padding: 10px 0;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--espresso);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.breakfast-card button:hover,
+.launch-card button:hover,
+.drink-card button:hover,
+.dessert-card button:hover {
+  background-color: var(--coffee-light);
+}
+
+/* Reservation Banner */
+
+.res-box {
+  background-color: #EFE3D3;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 40px 80px;
+  flex-wrap: wrap;
+}
+
+.res-box .text {
+  text-align: left;
+}
+
+.res-box .text h2 {
+  font-size: 1.6rem;
+  color: var(--coffee);
+}
+
+.res-box .text p {
+  margin-top: 6px;
+  color: var(--text-muted);
+}
+
+.res-box .res-btn button {
+  padding: 12px 32px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--espresso);
+  background-color: #fff;
+  border: 2px solid var(--espresso);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.res-box .res-btn button:hover {
+  background-color: var(--espresso);
+  color: #fff;
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--espresso);
+  color: var(--cream);
+  padding: 50px 60px 24px;
+  margin-top: 40px;
+}
+
+footer .contact {
+  text-align: center;
+}
+
+footer .contact h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--cream);
+}
+
+footer .contact h4 {
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #d8c9b6;
+  margin-top: 4px;
+}
+
+footer hr {
+  border: none;
+  border-top: 1px solid rgba(247, 241, 232, 0.15);
+  margin: 24px 0 16px;
+}
+
+footer .copyright {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #c9b8a3;
+}
+
+footer .copyright span {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+  nav {
+    padding: 16px 24px;
+  }
+
+  nav .menu ul {
+    gap: 20px;
+  }
+
+  .breakfast-cards,
+  .launch-cards,
+  .drink-cards,
+  .dessert-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .res-box {
+    padding: 30px 40px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .res-box .text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav .menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .breakfast-cards,
+  .launch-cards,
+  .drink-cards,
+  .dessert-cards {
+    grid-template-columns: 1fr;
+  }
+
+  #meal-time ul {
+    gap: 8px;
+  }
+
+  #meal-time ul li {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  footer {
+    padding: 40px 24px 20px;
+  }
+}
