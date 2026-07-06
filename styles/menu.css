@@ -180,7 +180,7 @@ img {
   flex-wrap: wrap;
 }
 
-#meal-time ul li {
+#meal-time ul li a{
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 0.95rem;
@@ -190,11 +190,12 @@ img {
   border: 1px solid var(--border);
   border-radius: 30px;
   cursor: pointer;
+  text-decoration: none;
   transition: background-color var(--transition), color var(--transition), border-color var(--transition);
 }
 
-#meal-time ul li:hover,
-#meal-time ul li.active {
+#meal-time ul li a:hover,
+#meal-time ul li a.active {
   background-color: var(--espresso);
   border-color: var(--espresso);
   color: #fff;
