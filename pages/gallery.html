@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Our Gallery | Quiet Corner Coffee Shop</title>
+   <meta name="description" content="Browse photos of Quiet Corner Coffee Shop's coffee, food, and interior.">
+   <link rel="stylesheet" href="../styles/style.css">
+   <link rel="stylesheet" href="../styles/gallery.css">
+</head>
+
+<body>
+
+   <nav>
+      <div class="logo">
+         <a href="../index.html">
+            <img src="../images/logoWithText.png" alt="Quiet Corner Coffee Shop logo">
+         </a>
+      </div>
+      <div class="menu">
+         <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/menu.html">Menu</a></li>
+            <li><a href="../pages/gallery.html" aria-current="page">Gallery</a></li>
+            <li><a href="../pages/reserve.html">Reservation</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+         </ul>
+      </div>
+      <div class="authBtn">
+         <a class="btn btn-outline" href="../pages/login.html">Log In</a>
+         <a class="btn btn-solid" href="../pages/signup.html">Sign Up</a>
+      </div>
+   </nav>
+
+   <header>
+      <section id="contact-hero">
+         <h1>Our Gallery</h1>
+         <p>Every Cup Has a Story, Every Corner Feels Like Home.</p>
+      </section>
+   </header>
+
+   <main>
+      <section id="meal-time" aria-label="Gallery filters">
+         <ul>
+            <li><button type="button" class="filter-btn active" data-filter="all">All</button></li>
+            <li><button type="button" class="filter-btn" data-filter="coffee">Coffee</button></li>
+            <li><button type="button" class="filter-btn" data-filter="food">Food</button></li>
+            <li><button type="button" class="filter-btn" data-filter="interior">Interior</button></li>
+         </ul>
+      </section>
+      <div class="line container"></div>
+
+      <section id="gallery" aria-label="Photo gallery">
+         <div class="img-box box-1" data-category="coffee">
+            <img src="../menu-photo/cappuccino.jpg" alt="Cappuccino with latte art" loading="lazy">
+         </div>
+         <div class="img-box box-2" data-category="food">
+            <img src="../menu-photo/pancake.webp" alt="Stack of pancakes" loading="lazy">
+         </div>
+         <div class="img-box box-3" data-category="food">
+            <img src="../menu-photo/chessy-omlete.jpg" alt="Cheesy omelette" loading="lazy">
+         </div>
+         <div class="img-box box-4" data-category="interior">
+            <img src="../images/rooftop2.jpg" alt="Rooftop seating area" loading="lazy">
+         </div>
+         <div class="img-box box-5" data-category="food">
+            <img src="../menu-photo/chocolate-cake.jpg" alt="Slice of chocolate cake" loading="lazy">
+         </div>
+         <div class="img-box box-6" data-category="food">
+            <img src="../menu-photo/avocado-toast.jpeg" alt="Avocado toast" loading="lazy">
+         </div>
+         <div class="img-box box-7" data-category="interior">
+            <img src="../images/rooftop1.jpg" alt="Rooftop dining view" loading="lazy">
+         </div>
+         <div class="img-box box-8" data-category="food">
+            <img src="../menu-photo/yogurt.jpg" alt="Fruit yogurt bowl" loading="lazy">
+         </div>
+         <div class="img-box box-9" data-category="coffee">
+            <img src="../menu-photo/tiremusa.jpg" alt="Tiramisu dessert" loading="lazy">
+         </div>
+         <div class="img-box box-11" data-category="interior">
+            <img src="../images/rooftop3.jpg" alt="Rooftop lounge corner" loading="lazy">
+         </div>
+         <div class="img-box box-10" data-category="coffee">
+            <img src="../menu-photo/mocha.jpg" alt="Mocha coffee cup" loading="lazy">
+         </div>
+         <div class="img-box box-12" data-category="food">
+            <img src="../menu-photo/tomato-soup.jpg" alt="Bowl of tomato soup" loading="lazy">
+         </div>
+         <div class="img-box box-14" data-category="interior">
+            <img src="../images/rooftop4.jpg" alt="Rooftop evening ambiance" loading="lazy">
+         </div>
+         <div class="img-box box-13" data-category="food">
+            <img src="../menu-photo/salad.jpg" alt="Fresh garden salad" loading="lazy">
+         </div>
+         <div class="img-box box-15" data-category="food">
+            <img src="../menu-photo/cheesse-cake.jpg" alt="Cheesecake slice" loading="lazy">
+         </div>
+         <div class="img-box box-16" data-category="food">
+            <img src="../menu-photo/creamy-pasta.jpg" alt="Creamy pasta dish" loading="lazy">
+         </div>
+      </section>
+
+      <section id="reserve-Table" class="container">
+         <div class="res-box">
+            <div class="text">
+               <h2>Love What You See?</h2>
+               <p>Visit Quiet Corner and create your own memories.</p>
+            </div>
+            <div class="res-btn">
+               <a class="btn" href="../pages/reserve.html">Reserve a Table</a>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <div class="contact">
+         <h2>Quiet Corner</h2>
+         <h4>12/Jhiltuli, Faridpur</h4>
+         <h4>+880 1793-075097</h4>
+      </div>
+      <hr>
+      <div class="copyright">&copy; 2026 Quiet Corner Coffee Shop. Developed by <span>Mohim</span>. All rights reserved.
+      </div>
+   </footer>
+
+   <script src="../scripts/gallery.js"></script>
+</body>
+
+</html>
