@@ -366,7 +366,7 @@ img {
   color: var(--text-muted);
 }
 
-.res-box .res-btn button {
+.res-box .res-btn a {
   padding: 12px 32px;
   font-weight: 600;
   font-size: 0.95rem;
@@ -378,7 +378,7 @@ img {
   transition: background-color var(--transition), color var(--transition);
 }
 
-.res-box .res-btn button:hover {
+.res-box .res-btn a:hover {
   background-color: var(--espresso);
   color: #fff;
 }
